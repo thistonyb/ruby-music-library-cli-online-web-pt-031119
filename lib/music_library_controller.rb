@@ -29,7 +29,7 @@ class MusicLibraryController
     end
     binding.pry
   end
-  
+
 
   def list_artists
     counter = 1
