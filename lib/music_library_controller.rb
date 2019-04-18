@@ -6,7 +6,7 @@ class MusicLibraryController
   end
 
   def call
-    user_imput = nil
+    user_input = nil
     puts "Welcome to your music library!"
     puts "To list all of your songs, enter 'list songs'."
     puts "To list all of the artists in your library, enter 'list artists'."
@@ -16,8 +16,8 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
-    while user_imput != "exit"
-      user_imput = gets
+    while user_input != "exit"
+      user_input = gets
     end
   end
 
@@ -49,8 +49,8 @@ class MusicLibraryController
     def list_songs_by_artist
       counter = 1
       puts "Please enter the name of an artist:"
-      user_imput = gets
-      if artist = Artist.find_by_name(user_imput)
+      user_input = gets
+      if artist = Artist.find_by_name(user_input)
         artist.songs.sort{|a, z| a.name <=> z.name}.each do |song|
           puts "#{counter}. #{song.name} - #{song.genre.name}"
           counter += 1
@@ -61,8 +61,8 @@ class MusicLibraryController
     def list_songs_by_genre
       counter = 1
       puts "Please enter the name of a genre:"
-      user_imput = gets
-      if genre = Genre.find_by_name(user_imput)
+      user_input = gets
+      if genre = Genre.find_by_name(user_input)
         genre.songs.sort{|a, z| a.name <=> z.name}.each do |song|
           puts "#{counter}. #{song.artist.name} - #{song.name}"
           counter += 1
@@ -72,8 +72,8 @@ class MusicLibraryController
 
     def play_song
       puts "Which song number would you like to play?"
-      user_imput = gets.to_i
-      if (1..Song.all.length).include?(user_imput)
+      user_input = gets.to_i
+      if (1..Song.all.length).include?(user_input)
        user_request = list_songs
 
       end
