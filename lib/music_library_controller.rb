@@ -49,7 +49,7 @@ class MusicLibraryController
       user_imput = gets
       if Artist.find_by_name(user_imput)
         Artist.songs.sort{|a, z| a.name <=> z.name}.each do |song|
-          puts "#{counter}. #{genre.name}"
+          puts "#{counter}. #{song.name}"
           counter += 1
         end
       end
