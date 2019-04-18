@@ -74,7 +74,7 @@ class MusicLibraryController
       user_imput = gets.to_i
       if (1..Song.all.length).include?(user_imput)
        user_request = list_songs
-       
+
       end
       binding.pry
     end
