@@ -58,7 +58,7 @@ class Song
     info = file.split(" - ")
     #info = file.split(/\s*[-\.]\s*/)
     artist = Artist.find_or_create_by_name(info[0])
-    genre = Genre.find_or_create_by_name(info[2])
+    genre = Genre.find_or_create_by_name(info[2].chomp("mp.3"))
     song = Song.new(info[1], artist, genre)
   end
 
