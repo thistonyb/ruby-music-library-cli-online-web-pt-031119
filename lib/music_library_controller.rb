@@ -58,7 +58,7 @@ class MusicLibraryController
 
       def list_songs_by_genre
         counter = 1
-        puts "Please enter the name of an genre:"
+        puts "Please enter the name of a genre:"
         user_imput = gets
         if genre = Artist.find_by_name(user_imput)
           artist.songs.sort{|a, z| a.name <=> z.name}.each do |song|
