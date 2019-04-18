@@ -27,7 +27,6 @@ class MusicLibraryController
       puts "#{counter}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       counter += 1
     end
-    binding.pry
   end
 
 
