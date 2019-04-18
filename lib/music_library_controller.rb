@@ -79,7 +79,14 @@ class MusicLibraryController
       end
     end
 
-
+  case input 
+    when 'list songs'
+    when 'list artists'
+    when 'list genres'
+    when 'list artist'
+    when 'list genre'
+    when 'play song'
+    when 'exit'
 
 
 
