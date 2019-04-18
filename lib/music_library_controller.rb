@@ -78,17 +78,4 @@ class MusicLibraryController
        puts "Playing #{sorted_songs[user_input - 1].name} by #{sorted_songs[user_input - 1].artist.name}"
       end
     end
-
-  case input
-    when 'list songs'
-    when 'list artists'
-    when 'list genres'
-    when 'list artist'
-    when 'list genre'
-    when 'play song'
-    when 'exit'
-
-
-
-
 end
