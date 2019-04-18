@@ -27,4 +27,8 @@ class MusicLibraryController
       counter += 1
     end
   end
+
+  def list_artists
+
+  end
 end
