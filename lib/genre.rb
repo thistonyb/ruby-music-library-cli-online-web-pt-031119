@@ -33,5 +33,4 @@ class Genre
     end
     artists.uniq
   end
-
 end
