@@ -19,7 +19,7 @@ class MusicLibraryController
     while user_input != "exit"
       user_input = gets
     end
-    case input
+    case user_input
       when 'list songs'
         list_songs
       when 'list artists'
