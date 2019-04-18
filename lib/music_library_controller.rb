@@ -76,7 +76,6 @@ class MusicLibraryController
        user_request = list_songs
 
       end
-      binding.pry
     end
 
 
