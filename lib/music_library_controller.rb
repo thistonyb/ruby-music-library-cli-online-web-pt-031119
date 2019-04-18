@@ -45,7 +45,6 @@ class MusicLibraryController
     end
   end
 
-
   def list_artists
     counter = 1
     Artist.all.sort{|a, z| a.name <=> z.name}.each do |artist|
@@ -62,36 +61,36 @@ class MusicLibraryController
     end
   end
 
-    def list_songs_by_artist
-      counter = 1
-      puts "Please enter the name of an artist:"
-      user_input = gets
-      if artist = Artist.find_by_name(user_input)
-        artist.songs.sort{|a, z| a.name <=> z.name}.each do |song|
-          puts "#{counter}. #{song.name} - #{song.genre.name}"
-          counter += 1
-        end
+  def list_songs_by_artist
+    counter = 1
+    puts "Please enter the name of an artist:"
+    user_input = gets
+    if artist = Artist.find_by_name(user_input)
+      artist.songs.sort{|a, z| a.name <=> z.name}.each do |song|
+        puts "#{counter}. #{song.name} - #{song.genre.name}"
+        counter += 1
       end
     end
+  end
 
-    def list_songs_by_genre
-      counter = 1
-      puts "Please enter the name of a genre:"
-      user_input = gets
-      if genre = Genre.find_by_name(user_input)
-        genre.songs.sort{|a, z| a.name <=> z.name}.each do |song|
-          puts "#{counter}. #{song.artist.name} - #{song.name}"
-          counter += 1
-        end
+  def list_songs_by_genre
+    counter = 1
+    puts "Please enter the name of a genre:"
+    user_input = gets
+    if genre = Genre.find_by_name(user_input)
+      genre.songs.sort{|a, z| a.name <=> z.name}.each do |song|
+        puts "#{counter}. #{song.artist.name} - #{song.name}"
+        counter += 1
       end
     end
+  end
 
-    def play_song
-      puts "Which song number would you like to play?"
-      user_input = gets.to_i
-      if (1..Song.all.length).include?(user_input)
-        sorted_songs = Song.all.sort{|a, z| a.name <=> z.name}
-       puts "Playing #{sorted_songs[user_input - 1].name} by #{sorted_songs[user_input - 1].artist.name}"
-      end
+  def play_song
+    puts "Which song number would you like to play?"
+    user_input = gets.to_i
+    if (1..Song.all.length).include?(user_input)
+      sorted_songs = Song.all.sort{|a, z| a.name <=> z.name}
+     puts "Playing #{sorted_songs[user_input - 1].name} by #{sorted_songs[user_input - 1].artist.name}"
     end
+  end
 end
