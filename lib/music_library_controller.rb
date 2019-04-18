@@ -60,7 +60,7 @@ class MusicLibraryController
         counter = 1
         puts "Please enter the name of a genre:"
         user_imput = gets
-        # if genre = Artist.find_by_name(user_imput)
+         if genre = Genre.find_by_name(user_imput)
         #   artist.songs.sort{|a, z| a.name <=> z.name}.each do |song|
         #     puts "#{counter}. #{song.name} - #{song.genre.name}"
         #     counter += 1
