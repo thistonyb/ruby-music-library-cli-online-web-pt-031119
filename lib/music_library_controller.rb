@@ -44,8 +44,12 @@ class MusicLibraryController
     end
 
     def list_songs_by_artist
+      counter = 1
       puts "Please enter the name of an artist:"
       user_imput = gets
+      if Artist.find_by_name(user_imput)
+        Artist.songs.sort{|a, z| a.name <=> z.name}.each do |song|
+          puts
     end
   end
 
