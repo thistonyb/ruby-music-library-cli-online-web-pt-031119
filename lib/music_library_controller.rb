@@ -71,7 +71,9 @@ class MusicLibraryController
     def play_song
       puts "Which song number would you like to play?"
       user_imput = gets.to_i
-      if
+      if (1..Song.all.length).include?(user_imput)
+       user_request = list_songs
+      end
     end
 
 
