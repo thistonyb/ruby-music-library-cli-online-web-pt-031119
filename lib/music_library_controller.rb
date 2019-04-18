@@ -42,6 +42,7 @@ class MusicLibraryController
       puts "#{counter}. #{genre.name}"
       counter += 1
     end
+  end
 
     def list_songs_by_artist
       counter = 1
