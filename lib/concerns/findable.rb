@@ -12,6 +12,5 @@ module Concerns
         self.create(name)
       end
     end
-
   end
 end
