@@ -27,7 +27,4 @@ class MusicLibraryController
       counter += 1
     end
   end
-
-
-
 end
